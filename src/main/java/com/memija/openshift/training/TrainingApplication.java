@@ -31,7 +31,7 @@ public class TrainingApplication {
 	}
 
 	@Bean
-	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
+	public CommandLineRunner run(RestTemplate restTemplate) {
 		return args -> {
 			Quote quote = restTemplate.getForObject(apiEndpoint, Quote.class);
 			if (quote != null) {
