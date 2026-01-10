@@ -1,14 +1,17 @@
 package com.memija.openshift.training.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Quote {
 
   private Long id;
-  private String quote;
+  @JsonProperty("quote")
+  private String content;
   private String author;
 
+  // Empty constructor needed for Jackson deserialization
   public Quote() {
   }
 
@@ -20,12 +23,12 @@ public class Quote {
     this.id = id;
   }
 
-  public String getQuote() {
-    return quote;
+  public String getContent() {
+    return content;
   }
 
-  public void setQuote(String quote) {
-    this.quote = quote;
+  public void setContent(String content) {
+    this.content = content;
   }
 
   public String getAuthor() {
@@ -40,7 +43,7 @@ public class Quote {
   public String toString() {
     return "Quote{" +
         "id=" + id +
-        ", quote='" + quote + '\'' +
+        ", content='" + content + '\'' +
         ", author='" + author + '\'' +
         '}';
   }

@@ -12,7 +12,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
 @WebMvcTest(HealthCheckController.class)
-public class HealthCheckControllerTest {
+class HealthCheckControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -21,7 +21,7 @@ public class HealthCheckControllerTest {
     private RestTemplate restTemplate;
 
     @Test
-    public void shouldReturnTrue() throws Exception {
+    void shouldReturnTrue() throws Exception {
         this.mockMvc.perform(get("/healthcheck"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("true"));
