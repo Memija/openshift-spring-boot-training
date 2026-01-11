@@ -11,8 +11,8 @@ public class Quote {
   private String content;
   private String author;
 
-  // Empty constructor needed for Jackson deserialization
   public Quote() {
+    // Empty constructor needed for Jackson deserialization
   }
 
   public Long getId() {
