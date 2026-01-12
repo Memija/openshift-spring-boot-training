@@ -3,9 +3,9 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Memija_openshift-spring-boot-training&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Memija_openshift-spring-boot-training)
 
 Run `./mvnw clean install` in order to build the application.
-Run `./mvnw site` in order to run the application on localhost:8080.
+Run `./mvnw spring-boot:run` in order to run the application on localhost:8080.
 
-## Leraning material
+## Learning material
 
 ### Java
 
